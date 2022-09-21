@@ -1,3 +1,4 @@
+/* add style attributes to table */
 .styled-table {
     border-collapse: collapse;
     font-family: sans-serif;
@@ -6,16 +7,19 @@
     margin-left: auto;
     margin-right: auto;
 }
+/* give color to table */
 .styled-table thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: center;
 }
+/* style table header */
 .styled-table th{
     font-size: 1.5em;
     text-align: center;
     padding: 5px;
 }
+/* style table rows */
 .styled-table td {
     padding: 12px 15px;
     font-size: 1em;
@@ -27,11 +31,12 @@
     height:100px
 }
 
+/* differentiate between even/odd rows  */
 .styled-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
     font-size: 1em;
 }
-
+/* differentiate user input row  */
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
     font-size: 1em;
@@ -42,10 +47,12 @@
 
 }
 
+/* center class*/
 .center {
     text-align: center;
 }
 
+/* add styling to ok and maybe inputs*/
 .glyphicon-ok-sign {
     color: green;
 }
@@ -62,14 +69,11 @@ input[type=submit]{
       cursor: pointer;
 }
 
+/* add styling row, columns  */
 .row {
 display: flex;
 }
 
 .column {
 flex: 50%;
-}
-
-.a {
-    cursor:default;
 }
