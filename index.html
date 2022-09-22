@@ -1,98 +1,169 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <!-- Define metadata, stylesheet relations, and link HTML to javascript file -->
-  <title>Doodle App Prototype</title>
-  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="button.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-<!-- Create Navigation Bar -->
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-calendar"></span> Doodle App Prototype</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <head>
+    <!-- Define metadata, stylesheet relations, and link HTML to javascript file -->
+    <title>Doodle App Prototype</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    ></script>
+    <script src="button.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- Create Navigation Bar -->
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="/"
+              ><span class="glyphicon glyphicon-calendar"></span> Doodle App
+              Prototype</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-<div class="container">
-  <!-- Doodle Instructions -->
-  <div class="alert alert-info text-center" role="alert">
-       <h4> Select your preferred times by checking the boxes below.</h4>
-      We'll let you know when the organizer picks the best time.
-  </div>
-  <hr>
-    <!-- Create Table-->
-    <table class="styled-table">
+    <div class="container">
+      <!-- Doodle Instructions -->
+      <div class="alert alert-info text-center" role="alert">
+        <h4>Select your preferred times by checking the boxes below.</h4>
+        We'll let you know when the organizer picks the best time.
+      </div>
+      <hr />
+      <!-- Create Table-->
+      <table class="styled-table">
         <thead>
-            <tr>
-              <!-- Define available time -->
-                <th>Test Doodle Event</th>
-                <th>Monday <br> Oct 19 <br><br> 9 am -<br> 12 pm</th>
-                <th>Tuesday <br> Oct 20 <br><br> 9 am -<br> 12 pm</th>
-                <th>Wednesday <br> Oct 21 <br><br> 9 am -<br> 12 pm</th>
-                <th>Thursday <br> Oct 22 <br><br> 9 am -<br> 12 pm</th>
-                <th>Friday <br> Oct 23 <br><br> 9 am -<br> 12 pm</th>
-            </tr>
+          <tr>
+            <!-- Define available time -->
+            <th>Test Doodle Event</th>
+            <th>
+              Monday <br />
+              Oct 19 <br /><br />
+              9 am -<br />
+              12 pm
+            </th>
+            <th>
+              Tuesday <br />
+              Oct 20 <br /><br />
+              9 am -<br />
+              12 pm
+            </th>
+            <th>
+              Wednesday <br />
+              Oct 21 <br /><br />
+              9 am -<br />
+              12 pm
+            </th>
+            <th>
+              Thursday <br />
+              Oct 22 <br /><br />
+              9 am -<br />
+              12 pm
+            </th>
+            <th>
+              Friday <br />
+              Oct 23 <br /><br />
+              9 am -<br />
+              12 pm
+            </th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-              <!-- Show availabilities (organizer)-->
-                <td>Patrick Song <br> (Organizer) </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-            </tr>
-            <tr>
-              <!-- Show availabilities (Alice)-->
-                <td>Alice </td>
-                <td><span class="glyphicon glyphicon-ok-sign maybe"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign"></span> </td>
-                <td><span class="glyphicon glyphicon-ok-sign maybe"></span> </td>
-            </tr>
-            <tr  class="active-row">
-               <!-- Give user option to check availabilites-->
-                <td>You</td>
-                <td><input type="radio" name="choice1" value="yes" onclick="buttonChange()" /> <span class="glyphicon glyphicon-ok-sign"></span> <br> <input type="radio" name="choice1" value="Maybe" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign maybe"></span> </td>
-                <td><input type="radio" name="choice2" value="yes" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign"></span> <br> <input type="radio" name="choice2" value="Maybe" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign maybe"></span> </td>
-                <td><input type="radio" name="choice3" value="yes" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign"></span> <br> <input type="radio" name="choice3" value="Maybe" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign maybe"></span> </td>
-                <td><input type="radio" name="choice4" value="yes" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign"></span> <br> <input type="radio" name="choice4" value="Maybe" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign maybe"></span> </td>
-                <td><input type="radio" name="choice5" value="yes" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign"></span> <br> <input type="radio" name="choice5" value="Maybe" onclick="buttonChange()"/> <span class="glyphicon glyphicon-ok-sign maybe"></span> </td>
-            </tr>
+          <tr>
+            <!-- Show availabilities (organizer)-->
+            <td>
+              Patrick Song <br />
+              (Organizer)
+            </td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+          </tr>
+          <tr>
+            <!-- Show availabilities (Alice)-->
+            <td>Alice</td>
+            <td><span class="glyphicon glyphicon-ok-sign maybe"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign"></span></td>
+            <td><span class="glyphicon glyphicon-ok-sign maybe"></span></td>
+          </tr>
+          <tr class="active-row">
+            <!-- Give user option to check availabilites-->
+            <td>You</td>
+            <td>
+              <span onclick="tristate('choice1')">
+                <i id="choice1" class="glyphicon glyphicon-remove"></i>
+              </span>
+            </td>
+            <td>
+              <span onclick="tristate('choice2')">
+                <i id="choice2" class="glyphicon glyphicon-remove"></i>
+              </span>
+            </td>
+            <td>
+              <span onclick="tristate('choice3')">
+                <i id="choice3" class="glyphicon glyphicon-remove"></i>
+              </span>
+            </td>
+            <td>
+              <span onclick="tristate('choice4')">
+                <i id="choice4" class="glyphicon glyphicon-remove"></i>
+              </span>
+            </td>
+            <td>
+              <span onclick="tristate('choice5')">
+                <i id="choice5" class="glyphicon glyphicon-remove"></i>
+              </span>
+            </td>
+          </tr>
         </tbody>
-    </table>
-    <!-- Explain the functionality of maybe and yes buttons -->
-    <h4 class="center">
-      <span class="glyphicon glyphicon-ok-sign"></span> Yes, I can make this time!
-      <span class="glyphicon glyphicon-ok-sign maybe"></span> If needed, I can make this time!
-    </h4>
-  <div class="row">
-    <!-- Define submit button: it is not clickable unless a user selected at least one time -->
-      <div class="column center">
-            <a id="submit" href="javascript: void(0)">  <input type="submit" id="button" value="Submit"></a>
+      </table>
+      <hr />
+      <!-- Explain the functionality of maybe and yes buttons -->
+      <div class="row">
+        <div class="column center">
+          <div class="alert alert-success text-center">
+            <span class="glyphicon glyphicon-ok-sign"></span> Yes, I can make this
+        time!
+          </div>
+        </div>
+        <div class="column center">
+          <div class="alert alert-warning text-center">
+            <span class="glyphicon glyphicon-ok-sign maybe"></span> If needed,
+          I can make this time!
+          </div>
+        </div>
+        <div class="column center">
+          <div class="alert alert-danger text-center">
+            <span class="glyphicon glyphicon-remove"></span> No, I can't make this
+          time!
+          </div>
+        </div>
       </div>
-
-  </div>
-    <div class="center">
+      <div class="row">
+        <!-- Define submit button: it is not clickable unless a user selected at least one time -->
+        <div class="column center">
+          <a id="submit" href="javascript: void(0)">
+            <input type="submit" id="button" value="Submit"
+          /></a>
+        </div>
+      </div>
+      <div class="center">
         Built using Javscript, HTML, CSS. Deployed on Github Pages.
+      </div>
     </div>
-
-
-</div>
-</body>
-		
+  </body>
 </html>
-
-
-
-
