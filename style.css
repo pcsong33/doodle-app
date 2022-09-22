@@ -71,6 +71,8 @@ input[type="submit"] {
 /* add styling row, columns  */
 .row {
   display: flex;
+  column-gap: 20px;
+  justify-content: space-around;
 }
 
 .column {

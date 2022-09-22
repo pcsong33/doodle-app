@@ -104,94 +104,55 @@
             <!-- Give user option to check availabilites-->
             <td>You</td>
             <td>
-              <input
-                type="radio"
-                name="choice1"
-                value="yes"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign"></span> <br />
-              <input
-                type="radio"
-                name="choice1"
-                value="Maybe"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign maybe"></span>
+              <span onclick="tristate('choice1')">
+                <i id="choice1" class="glyphicon glyphicon-remove"></i>
+              </span>
             </td>
             <td>
-              <input
-                type="radio"
-                name="choice2"
-                value="yes"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign"></span> <br />
-              <input
-                type="radio"
-                name="choice2"
-                value="Maybe"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign maybe"></span>
+              <span onclick="tristate('choice2')">
+                <i id="choice2" class="glyphicon glyphicon-remove"></i>
+              </span>
             </td>
             <td>
-              <input
-                type="radio"
-                name="choice3"
-                value="yes"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign"></span> <br />
-              <input
-                type="radio"
-                name="choice3"
-                value="Maybe"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign maybe"></span>
+              <span onclick="tristate('choice3')">
+                <i id="choice3" class="glyphicon glyphicon-remove"></i>
+              </span>
             </td>
             <td>
-              <input
-                type="radio"
-                name="choice4"
-                value="yes"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign"></span> <br />
-              <input
-                type="radio"
-                name="choice4"
-                value="Maybe"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign maybe"></span>
+              <span onclick="tristate('choice4')">
+                <i id="choice4" class="glyphicon glyphicon-remove"></i>
+              </span>
             </td>
             <td>
-              <input
-                type="radio"
-                name="choice5"
-                value="yes"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign"></span> <br />
-              <input
-                type="radio"
-                name="choice5"
-                value="Maybe"
-                onclick="buttonChange()"
-              />
-              <span class="glyphicon glyphicon-ok-sign maybe"></span>
+              <span onclick="tristate('choice5')">
+                <i id="choice5" class="glyphicon glyphicon-remove"></i>
+              </span>
             </td>
           </tr>
         </tbody>
       </table>
+      <hr />
       <!-- Explain the functionality of maybe and yes buttons -->
-      <h4 class="center">
-        <span class="glyphicon glyphicon-ok-sign"></span> Yes, I can make this
-        time! <span class="glyphicon glyphicon-ok-sign maybe"></span> If needed,
-        I can make this time!
-      </h4>
+      <div class="row">
+        <div class="column center">
+          <div class="alert alert-success text-center">
+            <span class="glyphicon glyphicon-ok-sign"></span> Yes, I can make this
+        time!
+          </div>
+        </div>
+        <div class="column center">
+          <div class="alert alert-warning text-center">
+            <span class="glyphicon glyphicon-ok-sign maybe"></span> If needed,
+          I can make this time!
+          </div>
+        </div>
+        <div class="column center">
+          <div class="alert alert-danger text-center">
+            <span class="glyphicon glyphicon-remove"></span> No, I can't make this
+          time!
+          </div>
+        </div>
+      </div>
       <div class="row">
         <!-- Define submit button: it is not clickable unless a user selected at least one time -->
         <div class="column center">
