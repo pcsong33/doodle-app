@@ -6,7 +6,7 @@ You can view the doodle prototype at this [link](https://pcsong33.github.io/dood
 ### App Features
 - View a list of availabilities defined by the event organizer
 - View the availabilites of other attendees
-- Mark your availibity as "yes" or "if neessary"
+- Mark your availibity as "yes", "if neessary", or "no"
 - You're only able to submit the form if at least one availability has been selected
 
-Note that in the official Doodle App, users are able to toggle between "yes" and "if neessary" by clicking a checkbox. In the prototype, this is implemented using multiple radio buttons.
+Note that in the official Doodle App, users are able to toggle between "yes", "if neessary", and "no" by clicking a checkbox. In the prototype, this is implemented using icons that change when clicked.
