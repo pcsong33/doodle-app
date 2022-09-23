@@ -18,7 +18,18 @@ function tristate(id) {
       // display the current value if it's unexpected
       alert(control.value);
   }
-  // Enables submit button after the users has toggled a setting
-  document.getElementById("submit").setAttribute("href", "submitted.html");
-  document.getElementById("button").style.backgroundColor = "green";
+  // loop through the ids and check if at least one availability has been set
+  var choices = 5
+  for (var i = 1; i <= choices; i++) {
+    var icon = document.getElementById("choice" + i);
+    if (icon.className != "glyphicon glyphicon-remove") {
+      // Enables submit button after the users has toggled a setting
+      document.getElementById("submit").setAttribute("href", "submitted.html");
+      document.getElementById("button").style.backgroundColor = "green";
+      return
+    }
+  }
+  // Disables submit button if no availabilites have been set
+  document.getElementById("submit").setAttribute("href", "javascript: void(0)");
+  document.getElementById("button").style.backgroundColor = "gray";
 }
